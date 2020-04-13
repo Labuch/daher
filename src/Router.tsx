@@ -12,10 +12,11 @@ export default function Router() {
       <Route
         path="/dashBoard/:userId"
         render={props => {
+          const { userId } = props.match.params;
           return (
             <Row>
               <Dashboard />
-              <RegionDetail regionId={476} />
+              <RegionDetail regionId={parseInt(userId)} />
             </Row>
           );
         }}

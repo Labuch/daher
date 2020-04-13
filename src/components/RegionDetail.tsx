@@ -52,8 +52,9 @@ function RegionDetail(props: IProps) {
   useEffect(() => {
     async function fetch(_regionId: number) {
       setRegion(undefined);
-      const _characters = await Region.fetchRegion(_regionId);
-      setRegion(_characters);
+      console.log(_regionId);
+      const _region = await Region.fetchRegion(_regionId);
+      setRegion(_region);
     }
     fetch(regionId);
   }, [regionId]);

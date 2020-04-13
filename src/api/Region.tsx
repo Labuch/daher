@@ -16,7 +16,7 @@ export interface IRegion {
 }
 
 const dumbdata: IRegion[] = [{
- regionId: 476,
+ regionId: 476 as number,
  sites: [
    {
     siteName: 'HUB Saint Nazaire ',
@@ -47,7 +47,9 @@ const dumbdata: IRegion[] = [{
 
 
 export function fetchRegion(regionId: number): IRegion {
-
-  return dumbdata.filter((region: IRegion) => region.regionId === regionId)[0];
+  return dumbdata.filter((region: IRegion) => {
+    console.log(region.regionId, regionId);
+    return region.regionId === (regionId as number);
+  })[0];
   ;
 }
