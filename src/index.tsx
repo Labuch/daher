@@ -3,16 +3,14 @@ import ReactDOM from 'react-dom';
 import { BrowserRouter } from 'react-router-dom';
 import Router from './Router';
 import * as serviceWorker from './serviceWorker';
-import Layout from './layout';
+import Layout from './Layout';
 
 ReactDOM.render(
- 
   <BrowserRouter>
     <Layout>
       <Router />
     </Layout>
-  </BrowserRouter>
- ,
+  </BrowserRouter>,
   document.getElementById('root')
 );
 

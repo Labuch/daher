@@ -1,11 +1,12 @@
 import React from 'react';
+import styled from 'styled-components';
+
+const StyledHeader = styled.div`
+  height: 45px;
+`;
 
 function Header() {
-  return (
-    <div className="header">
-      this is the header 
-    </div>
-  );
+  return <StyledHeader>{'<'} Mon compte</StyledHeader>;
 }
 
 export default Header;
